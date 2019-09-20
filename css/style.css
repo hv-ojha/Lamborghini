@@ -1,0 +1,350 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    overflow-x: hidden;
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    height: 7vw;
+    width: 100vw;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    font-family: Calibri;
+    font-weight: bolder;
+    font-size: 200%;
+    z-index: 1;
+}
+.logo{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-shrink:10%;
+    justify-content: center;
+    align-items: center;
+}
+header > nav{
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+header > nav > span{
+    font-size: 20px;
+    padding-right: 15px;
+    text-align: center;
+}
+header > nav > span > a {
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    transition-property: border-bottom-color;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+}
+header > nav > span > a:hover{
+    border-bottom-color: rgb(223, 134, 0);
+}
+header > aside {
+    width: 20%;
+    height: 100%;
+    justify-items: center;
+    align-content: center;
+    display: none;
+}
+@media only screen and (max-width : 1024px){
+    header {
+        height: 10%;
+        width: 100%;
+    }
+    header > nav {
+        display: none;
+        flex-basis: 60%;
+    }
+    header > aside{
+        position: absolute;
+        right: 0;
+        top: 25%;
+        display: inline;
+        /* flex-basis: 20%;
+        justify-items: center;
+        align-content: center; */
+    }
+    
+    .logo {
+        position: absolute;
+        left: 0;
+        display: inline;
+    }
+}
+.news-body{
+    margin-top: 9vw;
+    font-family: Roboto;
+}
+.news-head{
+    all: unset;
+    text-align: center;
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+.show-head {
+    background-color: #DDB321;
+    padding: 0.3em;
+    font-family: 'Segoe UI Light';
+    color: white;
+    font-style: italic;
+    font-weight: 400;
+}
+.news-body > blockquote {
+    margin-top: 5%;
+    font-family: 'Segoe UI Light';
+    text-align: center;
+    font-size: 1.2em;
+}
+.news-body section{
+    padding: 2em 10em;
+}
+.img-desc{
+    margin-left: 2.5em;
+    width: 100%;
+    background-color:#EFEFEA;
+    height: 23em;
+    display:flex;
+    
+}
+.img-desc1{
+    margin-left: 2.5em;
+    width: 100%;
+    background-color:#EFEFEA;
+    height: 18em;
+    display:flex;
+    
+}
+.image{
+    height: 100%;
+    flex-basis: 50%;
+    overflow: hidden;
+}
+.image img{
+    height:100%;
+    width:100%;
+    transform: scaleY(1.5);
+    position: relative;
+}
+.desc{
+    flex-basis: 50%;
+    margin-left:2em;
+    font-size: 1.2em;
+}
+.desc h3{
+    font-family: 'Segoe UI'; 
+}
+.desc p{
+    font-family: 'Segoe UI Light'; 
+}
+.link{
+    padding: 3px;
+    font-family: 'Segoe UI';
+    border-bottom: 1px solid #DDB321;
+    color: #DDB321;
+    transition: all 0.5s;
+}
+.link:hover{
+    background-color: #DDB321;
+    color: white;
+    cursor: pointer;
+}
+.main-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+.contents{
+    flex-basis:28%;
+    height: 28em;
+}
+.contents > figure{
+    width: 100%;
+}
+.contents > figure > img{
+    width:100%;
+}
+.contents > figure > figcaption{
+    font-family: 'Segoe UI';
+    font-size: 1.1em;
+    font-weight: 700;
+}
+.contents > figure > figcaption > span{
+    color: #DDB321;
+}
+.contents1{
+    flex-basis:28%;
+    height: 15em;
+}
+.contents1 > figure{
+    width: 100%;
+}
+.contents1 > figure > img{
+    width:100%;
+    height: 50%;
+}
+.contents1 > figure > figcaption{
+    font-family: 'Segoe UI';
+    font-size: 1.1em;
+    font-weight: 700;
+}
+.contents1 > figure > figcaption > span{
+    color: #DDB321;
+}
+figure > img:hover{
+    cursor: pointer;
+}
+footer{
+    width: 100%;
+    height: 30em;
+    background-image: url('../images/bg-footer.jpg');
+    color:white;
+    font-size: 1.2em;
+    padding: 1em 1em;
+    font-family: 'Lucida Sans';
+    background-repeat: repeat;
+    background-size: 100%;
+}
+.upper{
+    text-align: center;
+}
+.sub-menu > li{
+    list-style: none;
+    padding: 0.5em;
+    display: inline;
+    font-weight: 200;
+}
+.menu{
+    flex-basis: 18em;
+}
+.lower
+{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+footer .menu > li{
+    list-style: none;
+    padding: 0.5em 0em;
+    font-weight: 200;
+}
+footer ul > li:hover{
+    color: grey;
+    cursor: pointer;
+}
+footer .menu > li:first-child{
+    border-bottom: 1px solid white;
+    font-weight: 1000;
+}
+.social-media{
+    font-size: 0.9em;
+    text-align: center;
+}
+.social-media span{
+    letter-spacing: 1.2em;
+    padding: 3px;
+}
+.button{
+    padding: 5em;
+    text-align: center;
+}
+.button > span{
+    font-size: 1em;
+    background-color: #DDB321;
+    padding: 10px;
+    color: white;
+}
+
+.cut-out{
+    all: unset;
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    height: 38em;
+}
+.cut-out > .div-out{
+    flex-basis: 50%;
+    height: 100%;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    filter: brightness(50%);
+    background-color: red;
+    background-blend-mode: screen;
+}
+.div-out > span{
+    filter: brightness(200%);
+}
+.div-out:hover{
+    filter: brightness(100%);
+}
+@media only screen and (max-width:770px){
+    .img-desc1, .img-desc{
+        flex-direction: column;
+        width: 85%;
+    }
+    .cut-out{
+        flex-direction: column;
+    }
+    .div-out{
+        flex-basis: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-div{
+        width: 95%;
+        flex-direction: column;
+    }
+    .news-body > section{
+        padding: 1em;
+    }
+    .contents, .contents1{
+         width: 90%;
+    }
+    .desc > p, span{
+        display: none;
+    }
+    footer{
+        height: 33em;
+        width: 95%;
+    }
+    .sub-menu{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 80%;
+    }
+    .sub-menu > li{
+        border-bottom: 1px solid white;
+    }
+    .menu{
+        display: none;
+    }
+    .social-media > span{
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-content: center;
+    }
+}

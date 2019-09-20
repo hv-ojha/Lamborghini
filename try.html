@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="ng-scope pagetextsize0 pagetextcontrast0" lang="en" ng-class="getBodyClasses()" ng-app="lamborghini">
+<head>
+<title></title>
+<style>
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: rgba(199, 154, 87, 0.4);
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	hyphens: none;
+	-moz-hyphens: none;
+	-webkit-hyphens: none;
+	box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, a, small, strong, sub, sup, var, i, b, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	clear: both;
+	outline-width: 0px;
+	border-width: 0;
+	border-style: solid;
+	border-color: transparent;
+	background: transparent;
+	outline-style: solid;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	display: block;
+}
+body {
+	cursor: default;
+}
+html {
+	font-family: "Segoe UI","Helvetica Neue","Helvetica","Lucida Grande","Ubuntu","Roboto","Arial",sans-serif;
+}
+h1, h2, h3 {
+	text-rendering: optimizeLegibility;
+}
+a {
+	text-decoration: underline;
+}
+a, label, button, input[type='submit'], input[type='button'], input[type='reset'], input[type='radio'], input[type='checkbox'], select, option, input[type='image'], input[type='file'] {
+	cursor: pointer;
+}
+::selection {
+	background: #ddb321;
+	color: white;
+}
+section {
+	position: relative;
+	overflow: hidden;
+}
+.row-content {
+	max-width: 70em;
+	margin: 0 auto;
+	*zoom:1: ;
+}
+.row-content {
+	max-width: 1920px;
+	max-width: 2560px;
+	padding: 0 3rem;
+}
+.row-content {
+	overflow: hidden;
+}
+.row::after, .row-content::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+#news-stripe {
+	padding: 11rem 0 5.5rem;
+}
+#state {
+	position: relative;
+	min-height: calc(100vh - 39rem);
+	overflow: hidden;
+	max-width: 1920px;
+	max-width: 2560px;
+}
+#content {
+	-webkit-transition: all 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-moz-transition: all 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-ms-transition: all 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-o-transition: all 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.relative {
+	position: relative;
+}
+.body {
+	background-color: white;
+	margin: 0 auto;
+	max-width: 2560px;
+}
+body {
+	line-height: 1;
+}
+html, body, blockquote, pre, table, form {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	font-size: 10px;
+	margin: 0;
+}
+body {
+	color: inherit !important;
+}
+/* @media only screen and (max-width:1920px) and (min-width:1800px) */
+html, body {
+	font-size: 11px;
+}
+html {
+	font-size: 100%;
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+html {
+	line-height: 1.34;
+}
+html {
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-epub-hyphens: auto;
+	hyphens: auto;
+}
+h1, h2, h3, h4, h5, h6, strong, dt, mark, th {
+	font-weight: bold;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 1.34em;
+	margin-bottom: 0.67em;
+}
+h1, h2, h3, h4, h5, h6, ul {
+	margin: 0;
+	padding: 0;
+	font-family: Roboto;
+}
+h2, h3 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	margin-bottom: 3rem;
+	font-weight: lighter;
+}
+#news-stripe h3, #events-stripe h3 {
+	font-size: 5.3rem;
+	text-transform: uppercase;
+	font-family: Roboto;
+	text-align: center;
+	font-weight: bold;
+	color: black;
+	position: relative;
+	padding-bottom: 1rem;
+}
+#news-stripe h3::before, #events-stripe h3::before {
+	content: "";
+	background-color: black;
+	width: 15rem;
+	height: 0.5rem;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -7.5rem;
+}
+.row, .column {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.reset, .reset-top {
+	margin-top: 0px;
+}
+.reset, .reset-right {
+	margin-right: 0px;
+}
+.reset, .reset-bottom {
+	margin-bottom: 0px;
+}
+.reset, .reset-left {
+	margin-left: 0px;
+}
+.column {
+	height: 100%;
+	position: relative;
+}
+.column.reset {
+	margin-right: 0px;
+}
+.column.last {
+	margin-right: 0px;
+}
+@media handheld, only screen and (min-width:670px) {
+[class^='small-'].column, [class*=' small-'].column {
+	clear: none;
+	float: left;
+	min-height: 1px;
+	margin-left: 0px;
+	margin-right: 3.8%;
+}
+}
+
+@media handheld, only screen and (min-width:670px) {
+.column.small-six, .column.small-half, .column.small-threesixths, .column.small-twofourths {
+	width: 48%;
+}
+}
+
+@media handheld, only screen and (min-width:670px) {
+.column.small-push-one {
+	margin-left: 8.65%;
+}
+}
+
+@media handheld, only screen and (min-width:670px) {
+.column.small-four, .column.small-twosixths, .column.small-third {
+	width: 30.75%;
+}
+}
+
+@media handheld, only screen and (min-width:670px) {
+[class^='small-'].column.last, [class*=' small-'].column.last, [class^='small-'].column.tiny-last, [class*=' small-'].column.tiny-last {
+	margin-right: 3.8%;
+}
+}
+
+@media handheld, only screen and (min-width:670px) {
+[class^='small-'].column.reset, [class*=' small-'].column.reset {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+}
+
+@media handheld, only screen and (min-width:670px) {
+.column.small-six.reset, .column.small-half.reset, .column.small-threesixths.reset, .column.small-twofourths.reset {
+	width: 50%;
+}
+}
+@media handheld, only screen and (min-width:670px) {
+.column.reset.small-push-one {
+	margin-left: 8.3%;
+}
+}
+
+@media handheld, only screen and (min-width:670px) {
+.column.small-four.reset, .column.small-twosixths.reset, .column.small-third.reset {
+	width: 33.3%;
+}
+}
+
+#news-stripe .bottom, #events-stripe .bottom {
+	text-align: center;
+	padding-top: 5rem;
+}
+a {
+	color: #ddb321;
+}
+.btn {
+	-webkit-transition: background-color 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-moz-transition: background-color 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-ms-transition: background-color 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-o-transition: background-color 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	background-color: #e6d07a;
+	background-color: #dfb400;
+	padding: 1rem 2rem 1rem 2rem;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	line-height: 1.6rem;
+	font-weight: lighter;
+	font-weight: normal;
+	font-family: Roboto;
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	margin-right: 2rem;
+}
+.btn::after {
+	-webkit-transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-moz-transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-ms-transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-o-transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	content: "\e802";
+	font-family: "fontello";
+	position: absolute;
+	right: -3rem;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	font-size: 1.3rem;
+	line-height: 1.6rem;
+	font-weight: bold;
+	color: white;
+}
+#news-stripe .bottom a, #events-stripe .bottom a {
+	margin-right: 0px;
+}
+.btn span {
+	-webkit-transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-moz-transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-ms-transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-o-transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	position: relative;
+	display: inline-block;
+	color: white;
+	left: 0px;
+	white-space: nowrap;
+}
+#news-stripe .box, #events-stripe .box {
+	position: relative;
+	overflow: hidden;
+	display: block;
+}
+#news-stripe .box.tall, #events-stripe .box.tall {
+	padding-bottom: calc(150.3% + 1rem);
+	border-left: 1rem solid white;
+}
+#news-stripe .box .bg, #events-stripe .box .bg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	-webkit-transition: all 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-moz-transition: all 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-ms-transition: all 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-o-transition: all 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+#news-stripe .box > div:not(.bg), #events-stripe .box > div:not(.bg) {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+}
+#news-stripe .box > div:not(.bg)::before, #events-stripe .box > div:not(.bg)::before {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	background-image: url('/themes/custom/lambo/img/base/gradvert.png');
+	background-repeat: repeat-x;
+	background-size: contain;
+	background-position: bottom left;
+	left: 0px;
+	height: 50%;
+	width: 100%;
+}
+#news-stripe .box > div:not(.bg) .text, #events-stripe .box > div:not(.bg) .text {
+	color: white;
+	font-size: 1.8rem;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	padding: 2rem;
+}
+#news-stripe .box > div:not(.bg) .text .ttl, #events-stripe .box > div:not(.bg) .text .ttl {
+	text-transform: uppercase;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 1rem;
+	font-size: 1.8rem;
+}
+#news-stripe .box.wide, #events-stripe .box.wide {
+	padding-bottom: 50%;
+	margin-bottom: 1rem;
+}
+#news-stripe .box.square, #events-stripe .box.square {
+	padding-bottom: 100%;
+	margin-bottom: 1rem;
+}
+#news-stripe .box.square.second, #events-stripe .box.square.second {
+	border-left: .5rem solid white;
+}
+#news-stripe .box.square.first, #events-stripe .box.square.first {
+	border-right: .5rem solid white;
+}
+</style>
+</head>
+<body class="path-frontpage page-node-type-homepage">
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+        <div class="body relative"><div id="content">
+            <section id="state">
+                <section class="row-content newsboxes hidden-under-small" id="news-stripe">
+                    <h3>News</h3>
+                    <div class="column small-six small-push-one reset">
+                        <a class="box wide" href="https://www.lamborghini.com/en-en/news/huracan-evo-amplified-series-the-art-of-anticipation">
+                        <div class="bg" style="background-image:url( https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2019/04_30_LDVI/COVER_RP%20-%20Huracan%20Evo-2-M.jpg );"></div>
+                        <div class="bg ng-scope" style='background-image: url("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2019/04_30_LDVI/COVER_RP%20-%20Huracan%20Evo-2-M.jpg");' lazy-src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2019/04_30_LDVI/COVER_RP%20-%20Huracan%20Evo-2-M.jpg"></div>
+                            <div>
+                                <div class="text">
+                                    <span class="ttl">Huracán EVO “Amplified Series”: The Art of Anticipation</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="column small-six reset">
+                            <a class="box square first" href="https://www.lamborghini.com/en-en/news/huracan-evo-amplified-series-connecting-man-and-machine">
+                            <div class="bg" style="background-image:url( https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2019/04_24_HMI/cover_M.jpg );"></div>
+                            <div class="bg ng-scope" style='background-image: url("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2019/04_24_HMI/cover_M.jpg");' lazy-src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2019/04_24_HMI/cover_M.jpg"></div>
+                                <div>                            <div class="text">
+                                    <span class="ttl">Huracán EVO “Amplified Series”: Connecting Man and Machine</span>
+                                </div></div>
+                            </a>
+                        </div>
+                        <div class="column small-six reset last">
+                            <a class="box square second" href="https://www.lamborghini.com/en-en/news/ad-personam-aventador-svj-unique-in-every-detail">
+                            <div class="bg ng-scope" style='background-image: url("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2019/04_23_SVJviola/Cover_M.jpg");' lazy-src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2019/04_23_SVJviola/Cover_M.jpg"></div>
+                                <div>                            <div class="text">
+                                    <span class="ttl">Ad Personam Aventador SVJ: unique in every detail</span>
+                                </div></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column small-four reset">
+                            <a class="box tall" href="https://www.lamborghini.com/en-en/news/urus-versatility-at-its-best-we-went-surfing">
+                            <div class="bg ng-scope" style='background-image: url("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2019/04_19_Surf/COVER_LAMBORGHINI%20-%20URUS%20NAZARE_M.jpg");' lazy-src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2019/04_19_Surf/COVER_LAMBORGHINI%20-%20URUS%20NAZARE_M.jpg"></div>
+                                <div>                            <div class="text">
+                                    <span class="ttl">Urus’ versatility at its best: We went surfing</span>
+                                </div></div>
+                            </a>
+                    </div>
+                <div class="bottom"><a class="btn black" href="https://www.lamborghini.com/en-en/experience/news"><span>Discover more</span></a>
+                </div>
+                </section>
+        </section>
+    </div>
+</div>
+</div>
+</body>
+</html>
